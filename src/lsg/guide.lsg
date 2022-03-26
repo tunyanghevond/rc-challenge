@@ -1,0 +1,18 @@
+@sass ../../src/sass/index.sass
+@title Livingstyleguide for Coding
+
+@javascript-before ../js/jquery.min.js
+@javascript-after ../js/index.min.js
+
+@header {
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" id="lsg-css"  href="../css/bootstrap.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="lsg-css"  href="../css/lsg.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="lsg-css"  href="../css/index.css" type="text/css" media="all" />
+    <div class="lsg-header">
+        <div class="lsg-header-contain">
+            <div class="lsg-header-info">Dieser Guide dient der Programmierung Version 2.0.0</div>
+        </div>
+    </div>
+}

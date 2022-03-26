@@ -1,0 +1,43 @@
+// Farben
+$co-1: #fff
+$co-2: #E8ECEF
+$co-3: #6C768A
+$co-4: #DD1617
+$co-5: #F86E18
+$co-6: #000
+$co-7: #0C3A5E
+$co-8: #97B28D
+$co-9: #D3C4B5
+
+%gradient
+    border: none
+    background: $co-4
+    background: -moz-linear-gradient(left, $co-4 0%, $co-5 100%)
+    background: -webkit-linear-gradient(left, $co-4 0%,$co-5 100%)
+    background: linear-gradient(to right, $co-4 0%,$co-5 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$co-4', endColorstr='$co-5',GradientType=1 )
+    transition: all 300ms ease
+    &:hover
+        background: $co-5
+        background: -moz-linear-gradient(left, $co-5 0%, $co-4 100%)
+        background: -webkit-linear-gradient(left, $co-5 0%,$co-4 100%)
+        background: linear-gradient(to right, $co-5 0%,$co-4 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$co-5', endColorstr='$co-4',GradientType=1 )
+        transition: all 300ms ease
+
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage)
+    @return mix(white, $color, $percentage)
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage)
+    @return mix(black, $color, $percentage)

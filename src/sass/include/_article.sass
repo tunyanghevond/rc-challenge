@@ -1,0 +1,58 @@
+.article-row
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: $bu*2
+    margin: $bu 0
+    margin-bottom: $bu*2
+
+    .article-item
+        display: flex
+        flex-direction: column
+        position: relative
+        min-height: $bu*20
+        overflow: hidden
+        background-color: $co-1
+        border-radius: $br
+        box-shadow: $bxS
+
+        > *
+            &:not(.article-item-img)
+                padding: $bu/2 $bu
+
+        .article-item-img
+            position: relative
+            width: 100%
+            height: 250px
+            border-top-left-radius: $br
+            border-top-right-radius: $br
+            background-image: url('https://via.placeholder.com/400x250')
+            background-position: center center
+            background-size: cover
+            background-repeat: no-repeat
+            .article-item-productinfo
+                position: absolute
+                top: $bu/2
+                right: $bu/2
+
+        .article-item-title
+            @extend h4
+            position: relative
+            font-weight: $b
+            padding: $bu/2 $bu !important
+
+        .article-item-desc
+            font-size: 0.8em
+
+        .article-item-action
+            display: flex
+            justify-content: center
+            padding: $bu
+
+        .article-item-productinfo
+            display: block
+            position: relative
+            padding: 0
+            color: $co-3
+            &:hover
+                color: shade($co-3, 10%)
+

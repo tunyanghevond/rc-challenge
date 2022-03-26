@@ -1,0 +1,131 @@
+.btn
+    display: inline-flex
+    align-items: center
+    position: relative
+    margin: 0
+    padding: 2px $bu 0
+    height: $bu*2
+    font-size: 14px
+    line-height: 1em
+    font-weight: $b
+    text-transform: uppercase
+    color: $co-1 !important
+    border-radius: $br*4
+    background-color: $co-4
+    border: 1px solid $co-5
+    overflow: hidden
+    box-shadow: $bxSno
+    outline: none
+    @extend %gradient
+    transform: scale(1)
+    transition: $animation
+    &:hover,
+    &:active,
+    &:focus
+        cursor: pointer
+        color: $co-1 !important
+        outline: none
+        background-color: $co-5
+        border-color: $co-5
+        transition: $animation
+        transform: scale(1.02)
+    &:hover
+        box-shadow: $bxSB
+    &:active,
+    &:focus
+        outline: none
+        box-shadow: $bxSD
+
+    &.btn-icon
+        &:before
+            font-size: 3em
+            margin-top: -2px
+
+        &:not(.btn-icon-left)
+            padding-right: $bu/2
+            > *
+                order: 1
+            &:before
+                order: 2
+                margin-left: $bu/4
+        &.btn-icon-left
+            padding-left: $bu/2
+            &:before
+                margin-right: $bu/4
+
+    &.btn-small
+        font-size: 12px
+        padding: $bu/4/2 $bu/2 0
+        height: $bu*1.5
+
+    &.btn-notext
+        align-items: center
+        justify-content: center
+        padding: $bu/4/2 0 0
+        width: $bu*2
+        height: $bu*2
+        border-radius: 100%
+        &:before
+            order: 1
+            margin-left: 0
+
+    &.btn-2
+        color: $co-3 !important
+        background-image: none
+        background-color: $co-1
+        border-color: $co-1
+        &:hover,
+        &:active,
+        &:focus
+            background-color: $co-2
+            border-color: $co-2
+
+    &.btn-3
+        color: $co-3 !important
+        background-image: none
+        background-color: transparent
+        border-color: $co-3
+        &:hover,
+        &:active,
+        &:focus
+            color: $co-1 !important
+            background-color: $co-3
+            border-color: $co-3
+            box-shadow: none
+
+    &.btn-disable
+        opacity: 0.8
+        pointer-events: none
+        background-image: none
+        background-color: shade($co-1, 30%)
+        border-color: shade($co-1, 30%)
+        &.btn-disable-2
+            background-color: $co-3
+            border-color: $co-3
+
+.btn-group
+    display: flex
+    &.btn-group-center
+        justify-content: center
+    &.btn-group-right
+        justify-content: flex-end
+
+
+// Animation per Script (Ripple Effect ala "Matiral")
+.ripple-effect
+    position: absolute
+    border-radius: 100%
+    width: $bu
+    height: $bu
+    background: white
+    opacity: 0
+    animation: ripple-animation 2s
+
+@keyframes ripple-animation
+    from
+        transform: scale(1)
+        opacity: 0.2
+
+    to
+        transform: scale(100)
+        opacity: 0

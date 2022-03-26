@@ -1,0 +1,120 @@
+@font-face
+    font-family: 'Fira Sans'
+    src: url('../fonts/firasans/FiraSans-SemiBold.eot')
+    src: url('../fonts/firasans/FiraSans-SemiBold.eot?#iefix') format("embedded-opentype"), url('../fonts/firasans/FiraSans-SemiBold.woff2') format("woff2"), url('../fonts/firasans/FiraSans-SemiBold.woff') format("woff"), url('../fonts/firasans/FiraSans-SemiBold.ttf') format("truetype"), url('../fonts/firasans/FiraSans-SemiBold.svg#FiraSans-SemiBold') format("svg")
+    font-weight: 600
+    font-style: normal
+
+
+@font-face
+    font-family: 'Fira Sans'
+    src: url('../fonts/firasans/FiraSans-Light.eot')
+    src: url('../fonts/firasans/FiraSans-Light.eot?#iefix') format("embedded-opentype"), url('../fonts/firasans/FiraSans-Light.woff2') format("woff2"), url('../fonts/firasans/FiraSans-Light.woff') format("woff"), url('../fonts/firasans/FiraSans-Light.ttf') format("truetype"), url('../fonts/firasans/FiraSans-Light.svg#FiraSans-Light') format("svg")
+    font-weight: 300
+    font-style: normal
+
+
+@font-face
+    font-family: 'Fira Sans'
+    src: url('../fonts/firasans/FiraSans-Bold.eot')
+    src: url('../fonts/firasans/FiraSans-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/firasans/FiraSans-Bold.woff2') format("woff2"), url('../fonts/firasans/FiraSans-Bold.woff') format("woff"), url('../fonts/firasans/FiraSans-Bold.ttf') format("truetype"), url('../fonts/firasans/FiraSans-Bold.svg#FiraSans-Bold') format("svg")
+    font-weight: bold
+    font-style: normal
+
+
+@font-face
+    font-family: 'Fira Sans'
+    src: url('../fonts/firasans/FiraSans-Medium.eot')
+    src: url('../fonts/firasans/FiraSans-Medium.eot?#iefix') format("embedded-opentype"), url('../fonts/firasans/FiraSans-Medium.woff2') format("woff2"), url('../fonts/firasans/FiraSans-Medium.woff') format("woff"), url('../fonts/firasans/FiraSans-Medium.ttf') format("truetype"), url('../fonts/firasans/FiraSans-Medium.svg#FiraSans-Medium') format("svg")
+    font-weight: 500
+    font-style: normal
+
+
+@font-face
+    font-family: 'Fira Sans'
+    src: url('../fonts/firasans/FiraSans-Thin.eot')
+    src: url('../fonts/firasans/FiraSans-Thin.eot?#iefix') format("embedded-opentype"), url('../fonts/firasans/FiraSans-Thin.woff2') format("woff2"), url('../fonts/firasans/FiraSans-Thin.woff') format("woff"), url('../fonts/firasans/FiraSans-Thin.ttf') format("truetype"), url('../fonts/firasans/FiraSans-Thin.svg#FiraSans-Thin') format("svg")
+    font-weight: 100
+    font-style: normal
+
+
+@font-face
+    font-family: 'Fira Sans'
+    src: url('../fonts/firasans/FiraSans-Regular.eot')
+    src: url('../fonts/firasans/FiraSans-Regular.eot?#iefix') format("embedded-opentype"), url('../fonts/firasans/FiraSans-Regular.woff2') format("woff2"), url('../fonts/firasans/FiraSans-Regular.woff') format("woff"), url('../fonts/firasans/FiraSans-Regular.ttf') format("truetype"), url('../fonts/firasans/FiraSans-Regular.svg#FiraSans-Regular') format("svg")
+    font-weight: normal
+    font-style: normal
+
+
+
+$ft: 'Fira Sans'
+$l: 300
+$r: 400
+$s: 500
+$b: 700
+
+body
+    font-family: $ft
+    font-family: $r
+    font-size: 18px
+    line-height: 1.5em
+    color: $co-3
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+        display: block
+        margin: 0
+        color: $co-3
+        font-weight: $r
+        padding: 0
+        line-height: 1.5em
+
+    h1
+        font-size: 44px
+        // font-weight: $r
+
+    h2
+        font-size: 38px
+        // font-weight: $s
+        line-height: 1.2em
+        margin: 0 0 $bu
+
+    h3
+        font-size: 32px
+        // font-weight: $s
+        line-height: 1.5em
+        margin: 0 0 $bu
+
+    @keyframes blink-caret
+        from, to
+            color: transparent
+
+        50%
+            color: $co-3
+
+    h4
+        font-size: 19px
+
+    a
+        color: $co-4
+        text-decoration: none
+        &:hover,
+        &:active,
+        &:focus
+            color: shade($co-4, 40%)
+            text-decoration: none
+
+    ::selection
+        background-color: rgba($co-3, 0.8)
+        color: $co-1
+
+    ::-moz-selection
+        background-color: rgba($co-3, 0.8)
+        color: $co-1
+
+
+
