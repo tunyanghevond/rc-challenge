@@ -1,9 +1,31 @@
+.article-title
+    text-align: center
+    margin: $bu 0
+
+.article-title-img
+    width: 100px
+    height: 100px
+    object-fit: cover
+
+.article-title-description
+    max-width: 80%
+    margin: 0 auto   
+
 .article-row
+    display: -ms-grid
     display: grid
+    -ms-grid-template-columns: repeat(3, 1fr)
     grid-template-columns: repeat(3, 1fr)
     grid-gap: $bu*2
     margin: $bu 0
     margin-bottom: $bu*2
+
+    @media (max-width: $md-tb) 
+        -ms-grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr)
+    @media (max-width: $md-ph) 
+        -ms-grid-template-columns: 1fr
+        grid-template-columns: 1fr
 
     .article-item
         display: flex
@@ -14,6 +36,13 @@
         background-color: $co-1
         border-radius: $br
         box-shadow: $bxS
+        transition: $animation2
+        &:hover
+            cursor: pointer
+            transform: scale(1.02)
+            box-shadow: $bxSD
+            opacity: .9
+            font-weight: $b
 
         > *
             &:not(.article-item-img)
@@ -33,6 +62,7 @@
                 position: absolute
                 top: $bu/2
                 right: $bu/2
+                transform: translate(-13px,253px)
 
         .article-item-title
             @extend h4
